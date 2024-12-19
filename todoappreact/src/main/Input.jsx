@@ -34,6 +34,7 @@ export default function Input(props) {
         <div className="col-2">
         <button type="submit" className="btn btn-primary mb-3">Add</button>
         </div>
+
         </form>
     </div>
   )
