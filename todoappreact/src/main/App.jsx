@@ -11,7 +11,11 @@ export default function () {
     // console.log("data coming from input",value)
     //  todos.push(value)
 
-    settodos([...todos,value]);
+    if(value===""){
+      return alert("Add Todo");
+    }else{
+      settodos([...todos,value])
+    }
   };
 
   const removeTodo=(index)=>{
@@ -22,8 +26,17 @@ export default function () {
 
   };
   return (
-    <div className='container'>
-      <Input addTodo={addTodo}/>
+    <div className='container' style={{backgroundColor:"#3d4127"}}>
+      <h1 style={{
+        margin:"10px",
+        padding:"10px",
+        textAlign:"center",
+        color:"#fff",
+        backgroundColor:"#636b2f",
+        border:"dashed",
+        borderRadius:"50px"
+      }}>Todo App</h1>
+      <Input addTodo={addTodo} />
       <List todos={todos} removeTodo={removeTodo}/>
     </div>
   )

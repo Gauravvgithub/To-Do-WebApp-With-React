@@ -19,11 +19,11 @@ export default function Input(props) {
   }
 
   return (
-    <div>
-        <form className="row g-3 mt-5" onSubmit={submitt}>
+    <div >
+        <form className="row g-3 mt-5" onSubmit={submitt} >
 
         <div className="col-10">
-        <input type="text" className="form-control" placeholder='Enter Your Task'
+        <input style={{backgroundColor:"#d4de95", color:"black", fontWeight:"500"}} type="text" className="form-control" placeholder='Enter Your Task'
 
           value={todo}
           onChange={changeInput}
